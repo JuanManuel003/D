@@ -1,5 +1,5 @@
-import std.stdio; //importa la biblioteca estandar de 'D'
-import std.conv; //para la lectura de caracteres numericos
+import std.stdio;
+import std.conv; //para la lectura de caracteres nueri
 import std.exception; //para manejar las excepciones 
 import std.random;  // Para generar números aleatorios
 import std.array;   // Para manejar arreglos dinámicos
@@ -25,7 +25,7 @@ void main() {
     //ejemplo de numeros aleatorios y arrays 
     int[] arreglo = generarArregloAleatorio(numero);
 
-    writeln("Arreglo generado: ", arreglo);
+    writeln("Arreglo de ", numero , " caracteres generado: ", arreglo);
 
     }catch (ConvException e) {
         writeln("Error: Has introducido un valor que no es un número.");
