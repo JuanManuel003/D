@@ -27,8 +27,11 @@ void main() {
 
     writeln("Arreglo de ", numero , " caracteres generado: ", arreglo);
 
-    }catch (ConvException e) {
+    }catch (ConvException e) {//Para excepciones de conversión 
         writeln("Error: Has introducido un valor que no es un número.");
+    }catch (Throwable e) {
+        // Manejo de otras excepciones, si es necesario
+        writeln("Excepción inesperada: ", e.msg);
     }
 }
 
@@ -56,11 +59,11 @@ void CicloWhile (int numero){
 }
 
 int[] generarArregloAleatorio(int tamano) {
-    int[] arreglo; // Declarar un arreglo dinámico
+    int[] arreglo; 
 
     foreach (i; 0 .. tamano) {
-        arreglo ~= uniform(0, 100); // Agregar un número aleatorio entre 0 y 99 al arreglo
+        arreglo ~= uniform(0, 100); 
     }
 
-    return arreglo; // Retornar el arreglo generado
+    return arreglo; 
 }
